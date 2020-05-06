@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Bio from '../components/bio';
-import Layout from '../components/layout';
+import BlogLayout from '../components/layout';
 import SEO from '../components/seo';
 import { rhythm, scale } from '../utils/typography';
 
@@ -10,16 +10,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
   const { previous, next } = pageContext;
-  const image = post.frontmatter.image
-    ? post.frontmatter.image.childImageSharp.resize
-    : null;
+
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <BlogLayout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        image={image}
         pathname={location.pathname}
       />
       <article>
@@ -65,21 +62,21 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={previous.frontmatter.path} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={next.frontmatter.path} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
           </li>
         </ul>
       </nav>
-    </Layout>
+    </BlogLayout>
   );
 };
 
@@ -92,7 +89,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(frontmatter: { path: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
       html
@@ -100,6 +97,10 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        path
+      }
+      fields {
+        slug
       }
     }
   }

@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 import { rhythm, scale } from '../utils/typography';
 
-const Layout = ({ location, title, children }) => {
+const BlogLayout = ({ location, title, children }) => {
   // eslint-disable-next-line no-undef
   const rootPath = `${__PATH_PREFIX__}/`;
   let header;
@@ -22,7 +22,7 @@ const Layout = ({ location, title, children }) => {
             boxShadow: 'none',
             color: 'inherit',
           }}
-          to="/"
+          to="/blog"
         >
           {title}
         </Link>
@@ -41,7 +41,7 @@ const Layout = ({ location, title, children }) => {
             boxShadow: 'none',
             color: 'inherit',
           }}
-          to="/"
+          to="/blog"
         >
           {title}
         </Link>
@@ -69,4 +69,4 @@ const Layout = ({ location, title, children }) => {
   );
 };
 
-export default Layout;
+export default BlogLayout;

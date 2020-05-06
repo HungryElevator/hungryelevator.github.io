@@ -8,7 +8,7 @@ import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
 
 
-const Index = ({ data, location }) => {
+const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
 
@@ -17,17 +17,18 @@ const Index = ({ data, location }) => {
       <SEO title="Blog" />
       <Bio />
       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug;
+        debugger;
+        const title = node.frontmatter.title || node.frontmatter.path;
 
         return (
-          <article key={node.fields.slug}>
+          <article key={node.frontmatter.path}>
             <header>
               <h3
                 style={{
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                <Link style={{ boxShadow: 'none' }} to={node.frontmatter.path}>
                   {title}
                 </Link>
               </h3>
@@ -47,7 +48,7 @@ const Index = ({ data, location }) => {
   );
 };
 
-export default Index;
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -67,6 +68,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            path
           }
         }
       }
