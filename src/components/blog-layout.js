@@ -4,11 +4,9 @@ import { Link } from 'gatsby';
 import { rhythm, scale } from '../utils/typography';
 
 const BlogLayout = ({ location, title, children }) => {
-  // eslint-disable-next-line no-undef
-  const rootPath = `${__PATH_PREFIX__}/`;
   let header;
 
-  if (location.pathname === rootPath) {
+  if (location.pathname === '/blog') {
     header = (
       <h1
         style={{

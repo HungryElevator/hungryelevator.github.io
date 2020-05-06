@@ -59,6 +59,7 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
+    'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',

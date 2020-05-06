@@ -1,0 +1,58 @@
+.Header {
+  align-items: center;
+  background-color: #2e3344;
+  color: white;
+  display: flex;
+  font-family: Montserrat, sans-serif;
+  height: 4em;
+  justify-content: space-between;
+  padding: 0 2em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.Logo {
+  font-size: 2em;
+}
+
+.Link {
+  box-shadow: none;
+  color: white;
+  margin: 0;
+  text-decoration: none;
+}
+
+.Menu {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin: 0;
+
+  .Link {
+    align-items: center;
+    // border-bottom: 3px solid;
+    border-color: transparent;
+    display: flex;
+    height: 100%;
+    padding: 0 1em;
+
+    &.Selected {
+      // border-color: #ffe213;
+      color: #ffe213;
+      font-weight: bold;
+      position: relative;
+
+      &:after {
+        content: '';
+        background: linear-gradient(to Right, #fdff6b, #ff5700);
+        bottom: 0;
+        height: 3px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+  }
+}

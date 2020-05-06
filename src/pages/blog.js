@@ -3,7 +3,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import Bio from '../components/bio';
-import BlogLayout from '../components/layout';
+import WebLayout from '../components/web-layout';
 import SEO from '../components/seo';
 import { rhythm } from '../utils/typography';
 
@@ -13,11 +13,10 @@ const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <BlogLayout location={location} title={siteTitle}>
+    <WebLayout location={location} title={siteTitle}>
       <SEO title="Blog" />
       <Bio />
       {posts.map(({ node }) => {
-        debugger;
         const title = node.frontmatter.title || node.frontmatter.path;
 
         return (
@@ -44,7 +43,7 @@ const BlogIndex = ({ data, location }) => {
           </article>
         );
       })}
-    </BlogLayout>
+    </WebLayout>
   );
 };
 
