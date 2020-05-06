@@ -26,6 +26,7 @@
     "gatsby-transformer-remark": "^2.8.0",
     "gatsby-transformer-sharp": "^2.5.0",
     "prismjs": "^1.20.0",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
@@ -36,6 +37,12 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "gatsby-plugin-eslint": "^2.0.8",
     "prettier": "2.0.5"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
