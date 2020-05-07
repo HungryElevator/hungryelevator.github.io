@@ -1,0 +1,47 @@
+.Block {
+  background-color: #0c1021;
+  border-radius: 5px;
+  box-shadow: 0 0 15px black;
+  color: white;
+  font-family: 'Roboto Mono';
+  padding: 1rem 2rem 2rem;
+
+  h3 {
+    color: #00ff7f;
+    font-family: 'Roboto Mono';
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  section {
+    padding: 0 2rem;
+
+    b {
+      color: #f8be19;
+    }
+
+    p:last-child {
+      &:after {
+        animation: cursor 1s steps(2, end) infinite;
+        background: white;
+        color: white;
+        content: '_';
+      }
+    }
+  }
+}
+
+
+@keyframes cursor {
+  0% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
