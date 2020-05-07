@@ -1,7 +1,8 @@
-// Display media queries
-$mobile-max-width: 500px;
-$tablet-min-width: 750px;
-$desktop-min-width: 1000px;
+@import './colors.scss';
+@import './media-queries.scss';
 
-// Components
+// -------------------------------------
+// ---- Components ---------------------
+// -------------------------------------
+
 $header-height: 4em;

@@ -15,7 +15,6 @@ const BlogIndex = ({ data, location }) => {
   return (
     <WebLayout location={location} title={siteTitle}>
       <SEO title="Blog" />
-      <Bio />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.frontmatter.path;
 

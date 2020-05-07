@@ -10,6 +10,7 @@ const Header = (props) => {
       <ul className={styles.Menu}>
         <Link className={styles.Link} to="/" activeClassName={styles.Selected}>Home</Link>
         <Link className={styles.Link} to="/blog" activeClassName={styles.Selected}>Blog</Link>
+        <Link className={styles.Link} to="/resume" activeClassName={styles.Selected}>Resume</Link>
       </ul>
     </header>
   );

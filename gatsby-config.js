@@ -59,6 +59,25 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      options: {
+        fonts: [
+          {
+            family: 'Roboto Mono',
+            variants: ['400', '700'],
+          },
+          {
+            family: 'Permanent Marker',
+            variants: ['400'],
+          },
+          {
+            family: 'Major Mono Display',
+            variants: ['400'],
+          },
+        ],
+      },
+    },
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     {

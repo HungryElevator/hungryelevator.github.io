@@ -1,10 +1,12 @@
+@import '../utils/constants.scss';
+
 .Header {
   align-items: center;
   background-color: #2e3344;
   color: white;
   display: flex;
   font-family: Montserrat, sans-serif;
-  height: 4em;
+  height: $header-height;
   justify-content: space-between;
   padding: 0 2em;
   position: fixed;
@@ -14,7 +16,19 @@
 }
 
 .Logo {
-  font-size: 2em;
+  font-size: 1.5em;
+
+  @include sm {
+    font-size: 1.8em;
+  }
+
+  @include md {
+    font-size: 1.8em;
+  }
+
+  @include lg {
+    font-size: 2em;
+  }
 }
 
 .Link {
@@ -32,16 +46,13 @@
 
   .Link {
     align-items: center;
-    // border-bottom: 3px solid;
     border-color: transparent;
     display: flex;
     height: 100%;
     padding: 0 1em;
 
     &.Selected {
-      // border-color: #ffe213;
       color: #ffe213;
-      font-weight: bold;
       position: relative;
 
       &:after {
