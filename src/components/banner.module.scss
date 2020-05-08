@@ -1,0 +1,50 @@
+@import '../utils/constants.scss';
+
+.Banner {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 70vh;
+  margin-top: $header-height;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @include md {
+    background-size: cover;
+    flex-direction: row;
+  }
+
+  .Mask {
+    background-color: #0c1021;
+    opacity: 0.5;
+    height: 50%;
+    width: 100%;
+
+    @include md {
+      height: 100%;
+      width: 50%;
+    }
+  }
+
+  .Greetings {
+    align-items: center;
+    background-color: #0c1021;
+    color: white;
+    display: flex;
+    float: right;
+    height: 50%;
+    width: 100%;
+
+    @include md {
+      height: 100%;
+      width: 50%;
+    }
+
+    .Salute {
+      text-align: center;
+      font-size: 6rem;
+      line-height: 1;
+    }
+  }
+}

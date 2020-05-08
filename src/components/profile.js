@@ -23,7 +23,7 @@ const Profile = () => {
       <div>
         <h3 className="title">What makes me a top JavaScript developer?</h3>
         {/* <p>I've written <b>End-to-end test</b> with Selenium &amp; Cucumber in a Java Back-End environment, and also used Orchard.js in a JavaScript environment. The Front-End JavaScript <b>unit tests</b> were made with Tape.js. </p> */}
-        <p>I'm a technology lover with a strong problem-solving mindset.</p>
+        <p>I'm a technology lover with a strong <b>problem-solving</b> mindset.</p>
         <p>I've always work in small teams following an <b>agile methodology (SCRUM)</b>, trying to deliver small pieces instead of big parts, and knowing every person involved in the process; from scratch to deployment.</p>
         <p>As a hobby, I write and perform <b>stand-up comedy</b> and <b>improvisational theatre</b>, improving my verbal and written communication skills, as of beating stage fright. Besides, I design my own shows' posters.</p>
         <p>This translates into <span className={styles.MajorMono}>innovation</span> and <span className={styles.Marker}>creativity</span>.</p>
