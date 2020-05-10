@@ -1,17 +1,18 @@
 @import '../utils/constants.scss';
 
 .Layout {
+  background-color: $console-bg;
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
 .Content {
-  margin: calc(#{$header-height} + 2em) auto;
-  width: 90%;
+  margin: $header-height auto;
+  width: 80%;
 
   @include sm {
-    width: 85%;
+    width: 80%;
   }
 
   @include md {
@@ -19,6 +20,6 @@
   }
 
   @include lg {
-    width: 60%;
+    width: 65%;
   }
 }

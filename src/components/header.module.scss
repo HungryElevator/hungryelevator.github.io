@@ -8,7 +8,7 @@
   // font-family: Montserrat, sans-serif;
   height: $header-height;
   justify-content: space-between;
-  padding: 0 2em;
+  padding: 0 2rem;
   position: fixed;
   top: 0;
   width: 100%;
@@ -16,18 +16,18 @@
 }
 
 .Logo {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 
   @include sm {
-    font-size: 1.8em;
+    font-size: 1.8rem;
   }
 
   @include md {
-    font-size: 1.8em;
+    font-size: 1.8rem;
   }
 
   @include lg {
-    font-size: 2em;
+    font-size: 2rem;
   }
 }
 
@@ -48,8 +48,11 @@
     align-items: center;
     border-color: transparent;
     display: flex;
+    font-size: .8rem;
     height: 100%;
-    padding: 0 1em;
+    letter-spacing: 4px;
+    padding: 0 1rem;
+    text-transform: uppercase;
 
     &.Selected {
       color: #ffe213;

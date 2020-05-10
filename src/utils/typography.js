@@ -8,6 +8,14 @@ Wordpress2016.overrideThemeStyles = () => ({
 });
 
 delete Wordpress2016.googleFonts;
+Wordpress2016.overrideThemeStyles = ({ rhythm }) => ({
+  'h1,h2,h3,h4,h5,h6': {
+    fontFamily: ['Merriweather', 'Georgia', 'serif'].join(','),
+  },
+  // h1: {
+  //   marginBottom: rhythm(2),
+  // },
+});
 
 const typography = new Typography(Wordpress2016);
 

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import styles from './banner.module.scss';
 
-const Banner = ({ height, title, pic }) => {
+const Banner = ({ height, title = '', subtitle = '', pic }) => {
   const data = useStaticQuery(graphql`
     query {
       fileName: file(relativePath: { eq: "jorge-calle.jpg" }) {
@@ -37,10 +37,15 @@ const Banner = ({ height, title, pic }) => {
       style={inlineStyle}
     >
       <div className={styles.Mask} />
-      <div className={styles.Greetings}>
-        <span className={styles.Salute}>
-          {title}
-        </span>
+      <div className={styles.TitleBlock}>
+        <div className={styles.Title}>
+          <span className={styles.TitleBig}>
+            {title}
+          </span>
+          <span className={styles.TitleSmall}>
+            {subtitle}
+          </span>
+        </div>
       </div>
     </section>
   );

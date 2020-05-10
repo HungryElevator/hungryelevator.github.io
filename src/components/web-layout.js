@@ -6,7 +6,7 @@ import styles from './web-layout.module.scss';
 import Banner from './banner';
 
 
-const WebLayout = ({ location, title, children }) => {
+const WebLayout = ({ location, title, bannerTitle, bannerSubtitle, children }) => {
   const header = (
     <h1
       style={{
@@ -30,7 +30,7 @@ const WebLayout = ({ location, title, children }) => {
   return (
     <div className={styles.Layout}>
       <Header />
-      <Banner title="Hello, World." pic="jorge-calle.jpg" />
+      <Banner title={bannerTitle} subtitle={bannerSubtitle} pic="jorge-calle.jpg" />
       <main className={styles.Content}>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with

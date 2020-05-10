@@ -1,0 +1,20 @@
+@import '../utils/constants.scss';
+
+.Activity {
+
+  h3 {
+    color: $console-yellow;
+    margin-bottom: 0;
+  }
+
+  .Separator {
+    line-height: 1;
+    margin-top: 0;
+    max-height: 1.5rem;
+    overflow: hidden;
+  }
+
+  > p {
+    margin: 0;
+  }
+}

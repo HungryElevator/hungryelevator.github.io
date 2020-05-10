@@ -1,5 +1,85 @@
 @import '../utils/constants.scss';
 
+
+.Console {
+  color: white;
+  font-family: 'Roboto Mono';
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Mono';
+  }
+
+  h1 {
+    color: #00ff7f;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  section {
+    padding-bottom: 2rem;
+
+    b {
+      color: $console-yellow;
+    }
+
+    h1 {
+      &:after {
+        animation: cursor 1s steps(2, end) infinite;
+        background: white;
+        color: white;
+        content: '_';
+      }
+    }
+  }
+}
+
+@keyframes cursor {
+  0% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}
+
+.Skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Me {
+  border-left: 3px solid #27c93f;
+  margin-bottom: 6rem;
+  padding-left: 2rem;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  .Job {
+    color: #575f80;
+    margin: 0;
+  }
+}
+
 .Marker {
   color: $marker-color;
   font-family: 'Permanent Marker';
