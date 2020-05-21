@@ -1,0 +1,97 @@
+@import '../utils/constants.scss';
+
+
+.Footer {
+  background-color: $console-bg;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+
+  section {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    padding: 0 3rem;
+    width: 100%;
+
+    @include md {
+      width: 60%;
+    }
+
+    &.Social {
+      border-right: 1px solid dimgray;
+      font-size: 2rem;
+      text-align: right;
+
+      @include md {
+        width: 40%;
+      }
+    }
+
+    &.Navigation {
+      align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+
+      > div {
+        font-family: 'Roboto Mono';
+        position: relative;
+        transition: .15s linear;
+
+        &:after {
+          background: $console-yellow;
+          bottom: 0;
+          content: '';
+          height: 1px;
+          right: 0;
+          left: unset;
+          position: absolute;
+          transition: .2s linear;
+          width: 0;
+        }
+
+        &:hover {
+          color: $console-yellow;
+          transform: scale(1.2);
+
+          &:after {
+            left: 0;
+            right: unset;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .Icons {
+    display: flex;
+    justify-content: flex-end;
+
+    .SocialIcon {
+      align-items: center;
+      box-shadow: none;
+      color: white;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      padding: 5px;
+      transition: .15s linear;
+      width: 50px;
+
+      &:hover {
+        color: $console-yellow;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .Last {
+    background-color: $console-bg-dark;
+    font-family: 'Major Mono Display';
+    font-size: .9rem;
+    padding: 1rem 3rem;
+    text-align: center;
+    text-transform: lowercase;
+    width: 100%;
+  }
+}

@@ -2,17 +2,15 @@
 
 
 .Skill {
-  font-size: 1.3em;
+  font-size: 1.1rem;
   padding-right: 1rem;
   width: 100%;
 
   @include md {
-    font-size: 1.3em;
     width: 50%;
   }
 
   @include lg {
-    font-size: 1em;
     width: 33%;
   }
 
@@ -22,5 +20,13 @@
 
   .Progress {
     color: $console-yellow;
+  }
+
+  .Perfect {
+    color: $console-yellow;
+
+    .NoProgress {
+      color: $console-yellow;
+    }
   }
 }

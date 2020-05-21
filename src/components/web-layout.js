@@ -4,6 +4,7 @@ import { rhythm, scale } from '../utils/typography';
 import Header from './header';
 import styles from './web-layout.module.scss';
 import Banner from './banner';
+import Footer from './footer';
 
 
 const WebLayout = ({ location, title, bannerTitle, bannerSubtitle, children }) => {
@@ -32,11 +33,7 @@ const WebLayout = ({ location, title, bannerTitle, bannerSubtitle, children }) =
       <Header />
       <Banner title={bannerTitle} subtitle={bannerSubtitle} pic="jorge-calle.jpg" />
       <main className={styles.Content}>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {' '}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <Footer />
     </div>
   );
 };

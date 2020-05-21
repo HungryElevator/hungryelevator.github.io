@@ -1,10 +1,12 @@
 @import '../utils/constants.scss';
 
 .Activity {
+  padding-left: $function-padding-left;
 
   h3 {
     color: $console-yellow;
     margin-bottom: 0;
+    margin-top: 2rem;
   }
 
   .Separator {
