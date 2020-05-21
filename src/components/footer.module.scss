@@ -1,5 +1,6 @@
 @import '../utils/constants.scss';
 
+$navigation-letter-spacing: 5px;
 
 .Footer {
   background-color: $console-bg;
@@ -34,15 +35,16 @@
 
       > div {
         font-family: 'Roboto Mono';
+        letter-spacing: $navigation-letter-spacing;
         position: relative;
         transition: .15s linear;
 
         &:after {
-          background: $console-yellow;
+          background: linear-gradient(to Right, $console-yellow 70%, #ff5700);
           bottom: 0;
           content: '';
-          height: 1px;
-          right: 0;
+          height: 2px;
+          right: $navigation-letter-spacing;
           left: unset;
           position: absolute;
           transition: .2s linear;
@@ -56,7 +58,7 @@
           &:after {
             left: 0;
             right: unset;
-            width: 100%;
+            width: calc(100% - #{$navigation-letter-spacing});
           }
         }
       }
@@ -88,10 +90,14 @@
   .Last {
     background-color: $console-bg-dark;
     font-family: 'Major Mono Display';
-    font-size: .9rem;
+    font-size: .7rem;
     padding: 1rem 3rem;
     text-align: center;
     text-transform: lowercase;
     width: 100%;
+
+    @include md {
+      font-size: .9rem;
+    }
   }
 }

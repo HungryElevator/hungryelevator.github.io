@@ -11,6 +11,7 @@
   }
 
   @include lg {
+    font-size: 1rem;
     width: 33%;
   }
 
@@ -24,6 +25,7 @@
 
   .Perfect {
     color: $console-yellow;
+    font-weight: bold;
 
     .NoProgress {
       color: $console-yellow;

@@ -1,6 +1,7 @@
 // Gatsby supports TypeScript natively!
 import React from 'react';
 import { graphql } from 'gatsby';
+import { FcLike } from "react-icons/fc";
 
 import Profile from '../components/profile';
 import WebLayout from '../components/web-layout';
@@ -16,7 +17,7 @@ const Index = ({ data, location }) => {
       location={location}
       title={siteTitle}
       bannerTitle="Hello World."
-      bannerSubtitle="I ❤ Software Development."
+      bannerSubtitle={['I ', <FcLike />, ' Software Development.']}
     >
       <SEO title="Jorge Castaño" />
       <Profile />

@@ -83,7 +83,8 @@ const Profile = () => {
       </section>
 
       <section>
-        <h1>{'companies(who, trust, me) {'}</h1>
+        {/* <h1>{'companies(who, trust, me) {'}</h1> */}
+        <h1>{'clients() {'}</h1>
         <div className={styles.Companies}>
           {companyImgs.map(img => (
             <img src={img.publicURL} alt={img.name} />
@@ -94,7 +95,7 @@ const Profile = () => {
 
       <section className={styles.InfoBlock}>
         {/* <h1>What makes me a top JavaScript developer?</h1> */}
-        <h1>{'whatMakesMeA(top, Engineer) {'}</h1>
+        <h1>{'whyIAm(a, top, Engineer) {'}</h1>
         <p>I am a technology lover with a strong logic mindset and a <b>problem-solving</b> attitude.</p>
         <p>I have always worked in small & medium teams — up to 20 people — following <b>agile methodologies</b>, trying to deliver small pieces instead of big parts, and knowing every person involved in the process; from scratch to deployment.</p>
         <p>I am used to create <b>Software Solutions</b> from a simple idea, and to lead FrontEnd teams as a mentor or tech lead. I like code reviews and <b>coding solutions debates</b>.</p>
