@@ -57,7 +57,7 @@ const Footer = (props) => {
         <div>BLOG</div>
       </section>
       <div className={styles.Last}>
-        © {new Date().getFullYear()} - <span>Jorge Castaño | Software Engineer</span>
+        {new Date().getFullYear()} © <span>Jorge Castaño | Software Engineer</span>
       </div>
     </footer>
   );

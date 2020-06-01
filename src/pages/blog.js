@@ -13,8 +13,11 @@ const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <WebLayout location={location} title={siteTitle}>
-      <SEO title="Blog" />
+    <WebLayout
+      location={location}
+      title={siteTitle}
+    >
+      <SEO title="Blog | Jorge Castaño" />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.frontmatter.path;
 

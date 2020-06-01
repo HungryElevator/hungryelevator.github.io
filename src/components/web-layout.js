@@ -7,31 +7,11 @@ import Banner from './banner';
 import Footer from './footer';
 
 
-const WebLayout = ({ location, title, bannerTitle, bannerSubtitle, children }) => {
-  const header = (
-    <h1
-      style={{
-        ...scale(1.5),
-        marginBottom: rhythm(1.5),
-        marginTop: 0,
-      }}
-    >
-      <Link
-        style={{
-          boxShadow: 'none',
-          color: 'inherit',
-        }}
-        to="/blog"
-      >
-        {title}
-      </Link>
-    </h1>
-  );
-
+const WebLayout = ({ hasBanner = false, bannerTitle, bannerSubtitle, children }) => {
   return (
     <div className={styles.Layout}>
       <Header />
-      <Banner title={bannerTitle} subtitle={bannerSubtitle} pic="jorge-calle.jpg" />
+      {hasBanner && <Banner title={bannerTitle} subtitle={bannerSubtitle} pic="jorge-calle.jpg" />}
       <main className={styles.Content}>{children}</main>
       <Footer />
     </div>

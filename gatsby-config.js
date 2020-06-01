@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Jorge Castaño',
+    title: 'Jorge Castaño | Software Engineer',
     author: {
       name: 'Jorge Castaño',
       summary: 'software engineer and creative developer.',

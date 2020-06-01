@@ -1,0 +1,125 @@
+@import '../utils/constants.scss';
+
+$time-line-distance: -10%;
+$time-line-width: 4px;
+$time-line-marker: 16px;
+
+.Experience {
+  padding: 1em;
+}
+
+.Job {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0;
+
+  .Role {
+    padding-top: 1em;
+    position: relative;
+    text-align: right;
+    width: 25%;
+
+    @include md {
+      padding-top: 2em;
+    }
+
+    &:before {
+      background: $console-bg;
+      content: '';
+      height: 110%;
+      right: $time-line-distance;
+      position: absolute;
+      top: -10px;
+      width: $time-line-width;
+    }
+
+    &:after {
+      background: $console-bg;
+      border: 3px solid white;
+      border-radius: 50px;
+      content: '';
+      height: $time-line-marker;
+      right: calc(#{$time-line-distance} - calc(#{$time-line-marker} / 2) + calc(#{$time-line-width} / 2));
+      position: absolute;
+      top: 1.2em;
+      width: $time-line-marker;
+
+      @include md {
+        top: 2.2em;
+      }
+    }
+
+    .Title {
+      font-weight: bold;
+    }
+
+    .Date {
+      font-size: .9em;
+      font-style: italic;
+    }
+  }
+
+  .Company {
+    border: 1px solid $color-gray;
+    box-shadow: 2px 2px 0 $color-gray;
+    padding: 1em;
+    transition: .2s linear;
+    width: 70%;
+
+    @include md {
+      padding: 2em;
+    }
+
+    &:hover {
+      box-shadow: 7px 7px 0 $console-yellow-light;
+      border-color: $console-yellow-light;
+      transform: translate(-5px, -5px);
+
+      .CompanyName img {
+        border-color: $console-yellow-light;
+      }
+    }
+
+    .CompanyName {
+      display: flex;
+      font-weight: bold;
+      font-size: 1.5rem;
+      justify-content: space-between;
+      line-height: 1;
+
+      img {
+        border: 1px solid;
+        margin: 0;
+        width: 30%;
+      }
+    }
+
+    ul {
+      padding-left: 2em;
+
+      li {
+        margin-bottom: 0;
+      }
+    }
+
+    .JobTag {
+      font-family: 'Roboto Mono';
+      font-size: .9em;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .ClientList {
+      display: flex;
+      flex-wrap: wrap;
+
+      span {
+        padding: .5em 1em;
+
+        &:hover {
+          background-color: $console-yellow-light;
+        }
+      }
+    }
+  }
+}

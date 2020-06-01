@@ -1,20 +1,17 @@
 // Gatsby supports TypeScript natively!
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
-import Bio from '../components/bio';
 import WebLayout from '../components/web-layout';
 import SEO from '../components/seo';
+import Experience from '../components/experience';
 
 
 const Resume = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title;
-
   return (
-    <WebLayout location={location} title={siteTitle}>
-      <SEO title="Home" />
-      <Bio />
-      {' Resume'}
+    <WebLayout>
+      <SEO title="Resume | Jorge Castaño" />
+      <Experience />
     </WebLayout>
   );
 };

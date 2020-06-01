@@ -1,25 +1,21 @@
 // Gatsby supports TypeScript natively!
 import React from 'react';
 import { graphql } from 'gatsby';
-import { FcLike } from "react-icons/fc";
+import { FcLike } from 'react-icons/fc';
 
 import Profile from '../components/profile';
 import WebLayout from '../components/web-layout';
 import SEO from '../components/seo';
-import Skills from '../components/skills';
 
 
 const Index = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title;
-
   return (
     <WebLayout
-      location={location}
-      title={siteTitle}
+      hasBanner
       bannerTitle="Hello World."
       bannerSubtitle={['I ', <FcLike />, ' Software Development.']}
     >
-      <SEO title="Jorge Castaño" />
+      <SEO title="Jorge Castaño | Software Engineer" />
       <Profile />
     </WebLayout>
   );
