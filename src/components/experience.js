@@ -7,13 +7,16 @@ import styles from './experience.module.scss';
 const Experience = () => {
   const images = useStaticQuery(graphql`
     query {
-      krama: file(relativePath: {eq: "resume/krama.png"}) {
+      daimler: file(relativePath: {eq: "resume/daimler.jpg"}) {
+        publicURL
+      }
+      minsait: file(relativePath: {eq: "resume/minsait.jpg"}) {
         publicURL
       }
       aslam: file(relativePath: {eq: "resume/aslam.png"}) {
         publicURL
       }
-      minsait: file(relativePath: {eq: "resume/minsait.jpg"}) {
+      krama: file(relativePath: {eq: "resume/krama.png"}) {
         publicURL
       }
     }
@@ -30,7 +33,7 @@ const Experience = () => {
         <div className={styles.Company}>
           <div className={styles.CompanyName}>
             <span>DAIMLER</span>
-            <img src={images.minsait.publicURL} alt="minsait" />
+            <img src={images.daimler.publicURL} alt="daimler" />
           </div>
           <p className={styles.JobTag}>RESPONSIBILITIES</p>
           <ul>
@@ -38,7 +41,7 @@ const Experience = () => {
             <li>Front End Tech Lead in many projects.</li>
             <li>Mentorship for junior developers.</li>
             <li>Code reviews & pair programming.</li>
-            <li>Team tech sessions, JavaScript up to date.</li>
+            <li>Team tech sessions, Front end up to date.</li>
           </ul>
           <p className={styles.JobTag}>CLIENTS</p>
           <div className={styles.ClientList}>
