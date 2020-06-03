@@ -1,7 +1,9 @@
 @import '../utils/constants.scss';
 
 $time-line-distance: -10%;
-$time-line-width: 4px;
+$time-line-width-mob: 8px;
+$time-line-marker-mob: 26px;
+$time-line-width: 6px;
 $time-line-marker: 16px;
 
 .Experience {
@@ -10,42 +12,82 @@ $time-line-marker: 16px;
 
 .Job {
   display: flex;
+  flex-flow: column;
   justify-content: space-between;
-  padding: 1em 0;
+  margin-left: 1em;
+  padding: 0 2em 2em;
+  position: relative;
+
+  &:before {
+    background: $console-bg;
+    content: '';
+    height: 110%;
+    left: 0;
+    position: absolute;
+    top: -10px;
+    width: $time-line-width-mob;
+
+    @include md {
+      content: none;
+    }
+  }
+
+  &:after {
+    background: $console-bg;
+    border: 3px solid white;
+    border-radius: 50px;
+    content: '';
+    height: $time-line-marker-mob;
+    left: calc(calc(#{$time-line-width-mob} / 2) - calc(#{$time-line-marker-mob} / 2));
+    position: absolute;
+    top: 1.2em;
+    width: $time-line-marker-mob;
+
+    @include md {
+      content: none;
+    }
+  }
+
+  @include md {
+    flex-flow: row;
+    margin-left: 0;
+    padding: 1em 0;
+  }
 
   .Role {
     padding-top: 1em;
     position: relative;
-    text-align: right;
-    width: 25%;
+    width: 100%;
 
     @include md {
       padding-top: 2em;
-    }
+      text-align: right;
+      width: 25%;
 
-    &:before {
-      background: $console-bg;
-      content: '';
-      height: 110%;
-      right: $time-line-distance;
-      position: absolute;
-      top: -10px;
-      width: $time-line-width;
-    }
+      &:before {
+        background: $console-bg;
+        content: '';
+        height: 110%;
+        right: $time-line-distance;
+        position: absolute;
+        top: -10px;
+        width: $time-line-width;
+      }
 
-    &:after {
-      background: $console-bg;
-      border: 3px solid white;
-      border-radius: 50px;
-      content: '';
-      height: $time-line-marker;
-      right: calc(#{$time-line-distance} - calc(#{$time-line-marker} / 2) + calc(#{$time-line-width} / 2));
-      position: absolute;
-      top: 1.2em;
-      width: $time-line-marker;
+      &:after {
+        background: $console-bg;
+        border: 3px solid white;
+        border-radius: 50px;
+        content: '';
+        height: $time-line-marker;
+        right: calc(#{$time-line-distance} - calc(#{$time-line-marker} / 2) + calc(#{$time-line-width} / 2));
+        position: absolute;
+        top: 1.2em;
+        width: $time-line-marker;
 
-      @include md {
-        top: 2.2em;
+        @include md {
+          top: 2.2em;
+        }
       }
     }
 
@@ -64,10 +106,11 @@ $time-line-marker: 16px;
     box-shadow: 2px 2px 0 $color-gray;
     padding: 1em;
     transition: .2s linear;
-    width: 70%;
+    width: 100%;
 
     @include md {
       padding: 2em;
+      width: 70%;
     }
 
     &:hover {
@@ -86,16 +129,30 @@ $time-line-marker: 16px;
       font-size: 1.5rem;
       justify-content: space-between;
       line-height: 1;
+      margin-bottom: 1em;
 
       img {
         border: 1px solid $color-gray;
         margin: 0;
         width: 30%;
       }
+
+      @include md {
+        margin-bottom: 0;
+      }
     }
 
     ul {
-      padding-left: 2em;
+      margin-left: 0;
+      padding-left: 1em;
+
+      @include sm {
+        padding-left: 1em;
+      }
+
+      @include md {
+        padding-left: 2em;
+      }
 
       li {
         margin-bottom: 0;

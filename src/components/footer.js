@@ -25,14 +25,14 @@ const Footer = (props) => {
           >
             <GrInstagram />
           </a>
-          <a
+          {/* <a
             className={styles.SocialIcon}
             href="https://github.com/jorgcast"
             target="_blank"
             rel="noopener noreferrer"
           >
             <GrGithub />
-          </a>
+          </a> */}
           <a
             className={styles.SocialIcon}
             href="https://www.linkedin.com/in/jorge-casta%C3%B1o"
