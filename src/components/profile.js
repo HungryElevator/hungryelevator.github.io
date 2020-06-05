@@ -72,9 +72,8 @@ const Profile = () => {
         <JobActivity
           title={[<FcGraduationCap />, ' Development Teams Mentorship']}
           description={[
-            'Programming standards definitions',
-            'Applications Architecture',
             'Programming best practices',
+            'Applications Architecture',
             'JavaScript Pros & Cons',
             'Pair programming',
           ]}

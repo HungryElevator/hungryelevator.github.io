@@ -1,5 +1,6 @@
 import React from 'react';
 import { GrTwitter, GrInstagram, GrGithub, GrLinkedinOption, GrMedium } from 'react-icons/gr';
+import { Link } from 'gatsby';
 
 import styles from './footer.module.scss';
 
@@ -52,9 +53,9 @@ const Footer = (props) => {
         </div>
       </section>
       <section className={styles.Navigation}>
-        <div>ABOUT</div>
-        <div>RESUME</div>
-        <div>BLOG</div>
+        <Link to="/">ABOUT</Link>
+        <Link to="/resume">RESUME</Link>
+        <Link to="/blog">BLOG</Link>
       </section>
       <div className={styles.Last}>
         {new Date().getFullYear()} © <span>Jorge Castaño | Software Engineer</span>

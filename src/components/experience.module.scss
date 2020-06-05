@@ -4,10 +4,10 @@ $time-line-distance: -10%;
 $time-line-width-mob: 8px;
 $time-line-marker-mob: 26px;
 $time-line-width: 6px;
-$time-line-marker: 16px;
+$time-line-marker: 26px;
 
 .Experience {
-  padding: 1em;
+  padding: 1em 0;
 }
 
 .Job {
@@ -15,7 +15,7 @@ $time-line-marker: 16px;
   flex-flow: column;
   justify-content: space-between;
   margin-left: 1em;
-  padding: 0 2em 2em;
+  padding: 0 0 2em 2em;
   position: relative;
 
   &:before {
@@ -33,7 +33,7 @@ $time-line-marker: 16px;
   }
 
   &:after {
-    background: $console-bg;
+    background: $console-yellow-light;
     border: 3px solid white;
     border-radius: 50px;
     content: '';
@@ -75,7 +75,7 @@ $time-line-marker: 16px;
       }
 
       &:after {
-        background: $console-bg;
+        background: $console-yellow-light;
         border: 3px solid white;
         border-radius: 50px;
         content: '';
@@ -102,8 +102,8 @@ $time-line-marker: 16px;
   }
 
   .Company {
-    border: 1px solid $color-gray;
-    box-shadow: 2px 2px 0 $color-gray;
+    border: 1px solid $console-yellow-light;
+    box-shadow: 2px 2px 0 $console-yellow-light;
     padding: 1em;
     transition: .2s linear;
     width: 100%;
@@ -115,7 +115,6 @@ $time-line-marker: 16px;
 
     &:hover {
       box-shadow: 7px 7px 0 $console-yellow-light;
-      border-color: $console-yellow-light;
       transform: translate(-5px, -5px);
 
       .CompanyName img {
@@ -128,13 +127,19 @@ $time-line-marker: 16px;
       font-weight: bold;
       font-size: 1.5rem;
       justify-content: space-between;
-      line-height: 1;
+      line-height: 1.5;
       margin-bottom: 1em;
 
       img {
         border: 1px solid $color-gray;
+        height: 100%;
         margin: 0;
-        width: 30%;
+        margin-left: 8px;
+        width: 40%;
+
+        @include md {
+          width: 30%;
+        }
       }
 
       @include md {

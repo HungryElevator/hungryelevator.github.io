@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import WebLayout from '../components/web-layout';
 import SEO from '../components/seo';
 import Experience from '../components/experience';
+import Skills from '../components/skills';
 
 
 const Resume = ({ data, location }) => {
@@ -12,6 +13,7 @@ const Resume = ({ data, location }) => {
     <WebLayout>
       <SEO title="Resume | Jorge Castaño" />
       <Experience />
+      <Skills />
     </WebLayout>
   );
 };

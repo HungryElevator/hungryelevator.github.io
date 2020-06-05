@@ -33,10 +33,13 @@ $navigation-letter-spacing: 5px;
       display: flex;
       justify-content: space-evenly;
 
-      > div {
+      > * {
+        box-shadow: none;
+        color: white;
         font-family: 'Roboto Mono';
         letter-spacing: $navigation-letter-spacing;
         position: relative;
+        text-decoration: none;
         transition: .15s linear;
 
         &:after {
