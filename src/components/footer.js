@@ -53,9 +53,9 @@ const Footer = (props) => {
         </div>
       </section>
       <section className={styles.Navigation}>
-        <Link to="/">ABOUT</Link>
-        <Link to="/resume">RESUME</Link>
-        <Link to="/blog">BLOG</Link>
+        <Link to="/" activeClassName={styles.Selected}>ABOUT</Link>
+        <Link to="/resume" activeClassName={styles.Selected}>RESUME</Link>
+        <Link to="/blog" activeClassName={styles.Selected}>BLOG</Link>
       </section>
       <div className={styles.Last}>
         {new Date().getFullYear()} © <span>Jorge Castaño | Software Engineer</span>

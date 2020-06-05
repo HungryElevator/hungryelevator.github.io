@@ -53,14 +53,18 @@
     border-color: transparent;
     display: none;
     font-family: 'Roboto Mono';
-    height: 100%;
+    height: 80%;
     letter-spacing: 4px;
     padding: 0 1rem;
+    position: relative;
     text-transform: uppercase;
+    transition: .15s linear;
 
     @include md {
       display: flex;
     }
+
+    @extend %Navigation-Link;
 
     &.MenuOpener {
       display: flex;
@@ -69,21 +73,6 @@
 
       @include md {
         display: none;
-      }
-    }
-
-    &.Selected {
-      color: $console-yellow-light;
-      position: relative;
-
-      &:after {
-        content: '';
-        background: linear-gradient(to Right, $console-yellow-light, #ff5700);
-        bottom: 0;
-        height: 3px;
-        left: 0;
-        position: absolute;
-        width: 100%;
       }
     }
   }

@@ -1,6 +1,5 @@
 @import '../utils/constants.scss';
 
-$navigation-letter-spacing: 5px;
 
 .Footer {
   background-color: $console-bg;
@@ -42,27 +41,10 @@ $navigation-letter-spacing: 5px;
         text-decoration: none;
         transition: .15s linear;
 
-        &:after {
-          background: linear-gradient(to Right, $console-yellow 70%, #ff5700);
-          bottom: 0;
-          content: '';
-          height: 2px;
-          right: $navigation-letter-spacing;
-          left: unset;
-          position: absolute;
-          transition: .2s linear;
-          width: 0;
-        }
+        @extend %Navigation-Link;
 
         &:hover {
-          color: $console-yellow;
           transform: scale(1.2);
-
-          &:after {
-            left: 0;
-            right: unset;
-            width: calc(100% - #{$navigation-letter-spacing});
-          }
         }
       }
     }
