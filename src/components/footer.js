@@ -4,11 +4,11 @@ import { Link } from 'gatsby';
 
 import styles from './footer.module.scss';
 
-const Footer = (props) => {
+const Footer = () => {
   return (
     <footer className={styles.Footer}>
       <section className={styles.Social}>
-        <p>Jorge Castaño</p>
+        <p>Jorge Cáster</p>
         <div className={styles.Icons}>
           <a
             className={styles.SocialIcon}
@@ -58,7 +58,7 @@ const Footer = (props) => {
         <Link to="/blog" activeClassName={styles.Selected}>BLOG</Link>
       </section>
       <div className={styles.Last}>
-        {new Date().getFullYear()} © <span>Jorge Castaño | Software Engineer</span>
+        {new Date().getFullYear()} © <span>Jorge Cáster | Software Engineer</span>
       </div>
     </footer>
   );

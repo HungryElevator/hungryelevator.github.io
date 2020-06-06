@@ -19,6 +19,10 @@ const Experience = () => {
       krama: file(relativePath: {eq: "resume/krama.png"}) {
         publicURL
       }
+      resume: file(name: {eq: "CV_JorgeCastano"}) {
+        publicURL
+        name
+      }
     }
   `);
 

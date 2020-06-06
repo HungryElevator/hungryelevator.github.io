@@ -7,6 +7,7 @@ import { FcMultipleDevices, FcInspection, FcGraduationCap } from 'react-icons/fc
 import styles from './profile.module.scss';
 import Skill from './skill';
 import JobActivity from './job-activity';
+import Button from './UI/button';
 
 const Profile = () => {
   const years = new Date().getFullYear() - 2014;
@@ -20,6 +21,10 @@ const Profile = () => {
           }
         }
       }
+      resume: file(name: {eq: "CV_JorgeCastano"}) {
+        publicURL
+        name
+      }
     }
   `);
 
@@ -28,7 +33,7 @@ const Profile = () => {
   return (
     <div className={styles.Console}>
       <section className={styles.InfoBlock}>
-        <h1>{'aboutMe(Jorge, Castaño) {'}</h1>
+        <h1>{'aboutMe(Jorge, Cáster) {'}</h1>
         <p>I'm a <b>Senior FrontEnd Engineer</b> — currently also a <b>Tech Lead</b>.</p>
         <p>I have worked in many different <b>JavaScript</b> projects such as fintech, banks, health care, automobile &amp; videogames, for start-ups and top tech companies.</p>
         <p>Now I'm a <b>ReactJS enthusiast</b>, but I have also professional development experience with <b>Angular (5↑), VueJS, React Native and Backbone</b>.</p>
@@ -103,8 +108,13 @@ const Profile = () => {
         <h1>{'}'}</h1>
       </section>
 
+      <section className={styles.ButtonLine}>
+        <Button text="Download CV" downloadLink={data.resume.publicURL} />
+        <Button text="Get in touch" />
+      </section>
+
       {/* <section className={styles.Me}>
-        <h1>Jorge Castaño</h1>
+        <h1>Jorge Cáster</h1>
         <p className={styles.Job}>FrontEnd Engineer & Creative Developer</p>
         <p className={styles.Job}>hola@jorge-castano.com</p>
       </section>

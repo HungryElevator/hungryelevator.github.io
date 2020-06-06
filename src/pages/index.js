@@ -15,7 +15,7 @@ const Index = ({ data, location }) => {
       bannerTitle="Hello World."
       bannerSubtitle={['I ', <FcLike />, ' Software Development.']}
     >
-      <SEO title="Jorge Castaño | Software Engineer" />
+      <SEO title="Jorge Cáster | Software Engineer" />
       <Profile />
     </WebLayout>
   );

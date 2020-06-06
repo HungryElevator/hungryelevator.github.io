@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'Jorge Castaño | Software Engineer',
+    title: 'Jorge Cáster | Software Engineer',
     author: {
-      name: 'Jorge Castaño',
+      name: 'Jorge Cáster',
       summary: 'software engineer and creative developer.',
     },
-    description: 'Jorge Castaño\'s personal site.',
+    description: 'Jorge Cáster\'s personal site.',
     keywords: [
       'jorgecastano',
       'jorgecaster',
@@ -34,6 +34,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: 'assets',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/cv`,
+        name: 'cv',
       },
     },
     {

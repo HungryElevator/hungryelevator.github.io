@@ -17,7 +17,7 @@ const BlogIndex = ({ data, location }) => {
       location={location}
       title={siteTitle}
     >
-      <SEO title="Blog | Jorge Castaño" />
+      <SEO title="Blog | Jorge Cáster" />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.frontmatter.path;
 

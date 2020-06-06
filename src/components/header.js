@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <>
       <header className={styles.Header}>
-        <Link className={`${styles.Link} ${styles.Logo}`} to="/">Jorge Castaño</Link>
+        <Link className={`${styles.Link} ${styles.Logo}`} to="/">Jorge Cáster</Link>
         <nav className={styles.Menu}>
           <Link className={styles.Link} to="/" activeClassName={styles.Selected}>About</Link>
           <Link className={styles.Link} to="/resume" activeClassName={styles.Selected}>Resume</Link>
