@@ -2,18 +2,16 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Bio from '../components/bio';
 import WebLayout from '../components/web-layout';
 import SEO from '../components/seo';
 
 
 const Contact = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title;
+  const { title, jorge } = data.site.siteMetadata;
 
   return (
-    <WebLayout location={location} title={siteTitle}>
-      <SEO title="Home" />
-      <Bio />
+    <WebLayout location={location} title={title}>
+      <SEO title={`Contact | ${jorge}`} />
       {' Contact'}
     </WebLayout>
   );
@@ -26,6 +24,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        jorge
       }
     }
   }

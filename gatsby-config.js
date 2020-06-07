@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: 'Jorge Cáster | Software Engineer',
+    title: 'Jorge Castaño | Software Engineer',
+    jorge: 'Jorge Castaño',
     author: {
-      name: 'Jorge Cáster',
+      name: 'Jorge Castaño',
       summary: 'software engineer and creative developer.',
     },
-    description: 'Jorge Cáster\'s personal site.',
+    description: 'Jorge Castaño\'s personal site.',
     keywords: [
       'jorgecastano',
       'jorgecaster',

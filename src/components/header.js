@@ -14,12 +14,12 @@ const Header = () => {
   return (
     <>
       <header className={styles.Header}>
-        <Link className={`${styles.Link} ${styles.Logo}`} to="/">Jorge Cáster</Link>
+        <Link className={`${styles.Link} ${styles.Logo}`} to="/">Jorge Castaño</Link>
         <nav className={styles.Menu}>
           <Link className={styles.Link} to="/" activeClassName={styles.Selected}>About</Link>
           <Link className={styles.Link} to="/resume" activeClassName={styles.Selected}>Resume</Link>
-          <Link className={styles.Link} to="/blog" activeClassName={styles.Selected}>Blog</Link>
-          {/* <Link className={styles.Link} to="/contact" activeClassName={styles.Selected}>Contact</Link> */}
+          {/* <Link className={styles.Link} to="/blog" activeClassName={styles.Selected}>Blog</Link> */}
+          <Link className={styles.Link} to="/contact" activeClassName={styles.Selected}>Contact</Link>
           <span className={`${styles.Link} ${styles.MenuOpener}`} onClick={() => toggleMenu(!isMenuOpen)}>
             {menuIcon}
           </span>
@@ -29,7 +29,8 @@ const Header = () => {
         <div className={styles.FullMenu}>
           <Link className={styles.Link} to="/" activeClassName={styles.Selected}>About</Link>
           <Link className={styles.Link} to="/resume" activeClassName={styles.Selected}>Resume</Link>
-          <Link className={styles.Link} to="/blog" activeClassName={styles.Selected}>Blog</Link>
+          {/* <Link className={styles.Link} to="/blog" activeClassName={styles.Selected}>Blog</Link> */}
+          <Link className={styles.Link} to="/contact" activeClassName={styles.Selected}>Contact</Link>
         </div>
       )}
     </>

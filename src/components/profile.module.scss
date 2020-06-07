@@ -82,8 +82,7 @@
 section.ButtonLine {
   align-items: center;
   display: flex;
-  justify-content: space-evenly;
-  padding-bottom: 0;
+  justify-content: flex-end;
 
   > *:last-child {
     margin-right: 0;

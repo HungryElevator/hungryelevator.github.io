@@ -1,5 +1,9 @@
 @import '../../utils/constants.scss';
 
+a {
+  border-radius: 50px;
+}
+
 .Button {
   background-color: $console-bg-light;
   border: none;

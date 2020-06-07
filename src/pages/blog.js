@@ -9,17 +9,17 @@ import { rhythm } from '../utils/typography';
 
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title;
+  const { title, jorge } = data.site.siteMetadata;
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <WebLayout
       location={location}
-      title={siteTitle}
+      title={title}
     >
-      <SEO title="Blog | Jorge Cáster" />
+      <SEO title={`Blog | ${jorge}`} />
       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.frontmatter.path;
+        const postTitle = node.frontmatter.title || node.frontmatter.path;
 
         return (
           <article key={node.frontmatter.path}>
@@ -30,7 +30,7 @@ const BlogIndex = ({ data, location }) => {
                 }}
               >
                 <Link style={{ boxShadow: 'none' }} to={node.frontmatter.path}>
-                  {title}
+                  {postTitle}
                 </Link>
               </h3>
               <small>{node.frontmatter.date}</small>
@@ -56,6 +56,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        jorge
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

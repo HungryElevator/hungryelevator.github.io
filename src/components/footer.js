@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className={styles.Footer}>
       <section className={styles.Social}>
-        <p>Jorge Cáster</p>
+        <p>Jorge Castaño</p>
         <div className={styles.Icons}>
           <a
             className={styles.SocialIcon}
@@ -58,7 +58,7 @@ const Footer = () => {
         <Link to="/blog" activeClassName={styles.Selected}>BLOG</Link>
       </section>
       <div className={styles.Last}>
-        {new Date().getFullYear()} © <span>Jorge Cáster | Software Engineer</span>
+        {new Date().getFullYear()} © <span>Jorge Castaño | Software Engineer</span>
       </div>
     </footer>
   );

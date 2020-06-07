@@ -10,9 +10,11 @@ import DownloadCV from '../components/UI/downloadCV';
 
 
 const Resume = ({ data, location }) => {
+  const { jorge } = data.site.siteMetadata;
+
   return (
     <WebLayout>
-      <SEO title="Resume | Jorge Cáster" />
+      <SEO title={`Resume | ${jorge}`} />
       <DownloadCV position="Right" />
       <Experience />
       <Skills />
@@ -28,6 +30,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        jorge
       }
     }
   }

@@ -9,13 +9,15 @@ import SEO from '../components/seo';
 
 
 const Index = ({ data, location }) => {
+  const { jorge } = data.site.siteMetadata;
+
   return (
     <WebLayout
       hasBanner
       bannerTitle="Hello World."
       bannerSubtitle={['I ', <FcLike />, ' Software Development.']}
     >
-      <SEO title="Jorge Cáster | Software Engineer" />
+      <SEO title={`${jorge} | Software Engineer`} />
       <Profile />
     </WebLayout>
   );
@@ -28,6 +30,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        jorge
       }
     }
   }
