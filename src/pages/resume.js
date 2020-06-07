@@ -13,7 +13,7 @@ const Resume = ({ data, location }) => {
   return (
     <WebLayout>
       <SEO title="Resume | Jorge Cáster" />
-      <DownloadCV />
+      <DownloadCV position="Right" />
       <Experience />
       <Skills />
       <DownloadCV />
