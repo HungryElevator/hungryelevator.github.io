@@ -1,0 +1,67 @@
+@import '../utils/constants.scss';
+
+.Contact {
+  margin: auto;
+
+  @include xl {
+    width: 80%;
+  }
+
+  .Block {
+    border-bottom: 1px solid $console-yellow-light;
+    display: flex;
+    flex-flow: column;
+    padding-bottom: 2rem;
+
+    @include md {
+      flex-flow: row;
+    }
+
+    section {
+      display: flex;
+      flex-flow: column;
+      margin-bottom: 2rem;
+      width: 100%;
+
+      @include md {
+        padding-right: 2rem;
+        width: 50%;
+      }
+
+      &.Mail {
+        a {
+          color: $console-yellow-light;
+
+          &:hover {
+            color: $console-yellow;
+          }
+        }
+      }
+
+      h4 {
+        letter-spacing: 4px;
+      }
+
+      ul {
+        padding-left: 1rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .ShortInfo {
+    border-left: 5px solid $console-yellow-light;
+    padding-left: 1.5rem;
+
+    > p {
+      margin-bottom: .5rem;
+
+      &:last-of-type {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

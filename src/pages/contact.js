@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 
 import WebLayout from '../components/web-layout';
 import SEO from '../components/seo';
+import ContactInfo from '../components/contact-info';
 
 
 const Contact = ({ data, location }) => {
@@ -12,7 +13,7 @@ const Contact = ({ data, location }) => {
   return (
     <WebLayout location={location} title={title}>
       <SEO title={`Contact | ${jorge}`} />
-      {' Contact'}
+      <ContactInfo />
     </WebLayout>
   );
 };

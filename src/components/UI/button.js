@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styles from './button.module.scss';
 
-const Button = ({ text, downloadLink }) => {
+const Button = ({ text, downloadLink, navigate }) => {
   let button = (<button type="button" className={styles.Button}>{text}</button>);
 
   if (downloadLink) {
@@ -9,6 +10,12 @@ const Button = ({ text, downloadLink }) => {
       <a href={downloadLink} target="_blank" rel="noopener noreferrer">
         {button}
       </a>
+    );
+  } else if (navigate) {
+    button = (
+      <Link to={navigate}>
+        {button}
+      </Link>
     );
   }
 

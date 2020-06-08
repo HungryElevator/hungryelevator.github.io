@@ -1,0 +1,43 @@
+@import '../utils/constants.scss';
+
+.Icons {
+  display: flex;
+
+  &.Right {
+    justify-content: flex-end;
+  }
+
+  &.Center {
+    justify-content: center;
+  }
+
+  &.Left {
+    justify-content: flex-start;
+  }
+
+  &.Light {
+    color: white;
+  }
+
+  &.Dark {
+    color: $console-bg;
+  }
+
+  .SocialIcon {
+    align-items: center;
+    box-shadow: none;
+    color: inherit;
+    font-size: 2rem;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    padding: 5px;
+    transition: .15s linear;
+    width: 50px;
+
+    &:hover {
+      color: $console-yellow;
+      transform: scale(1.2);
+    }
+  }
+}

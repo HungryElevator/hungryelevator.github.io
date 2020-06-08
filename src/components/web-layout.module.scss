@@ -10,6 +10,7 @@
 
 .Content {
   margin: $header-height auto;
+  padding: 1px;
   width: 80%;
 
   @include sm {

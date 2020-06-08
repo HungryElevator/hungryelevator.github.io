@@ -50,28 +50,6 @@
     }
   }
 
-  .Icons {
-    display: flex;
-    justify-content: flex-end;
-
-    .SocialIcon {
-      align-items: center;
-      box-shadow: none;
-      color: white;
-      display: flex;
-      height: 40px;
-      justify-content: center;
-      padding: 5px;
-      transition: .15s linear;
-      width: 50px;
-
-      &:hover {
-        color: $console-yellow;
-        transform: scale(1.2);
-      }
-    }
-  }
-
   .Last {
     background-color: $console-bg-dark;
     font-family: 'Major Mono Display';

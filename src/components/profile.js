@@ -88,7 +88,7 @@ const Profile = () => {
       </section>
 
       <section className={styles.ButtonLine}>
-        <Button text="Get in touch" />
+        <Button text="Get in touch" navigate="/contact" />
       </section>
 
       <section>
