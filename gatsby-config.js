@@ -18,6 +18,7 @@ module.exports = {
       'creative developer',
     ],
     siteUrl: 'http://jorge-castano.com/',
+    email: 'hola@jorge-castano.com',
     social: {
       twitter: 'jorgecaster',
     },
