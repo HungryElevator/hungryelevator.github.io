@@ -14,7 +14,8 @@ const Footer = () => {
       <section className={styles.Navigation}>
         <Link to="/" activeClassName={styles.Selected}>ABOUT</Link>
         <Link to="/resume" activeClassName={styles.Selected}>RESUME</Link>
-        <Link to="/blog" activeClassName={styles.Selected}>BLOG</Link>
+        {/* <Link to="/blog" activeClassName={styles.Selected}>BLOG</Link> */}
+        <Link to="/contact" activeClassName={styles.Selected}>CONTACT</Link>
       </section>
       <div className={styles.Last}>
         {new Date().getFullYear()} © <span>Jorge Castaño | Software Engineer</span>

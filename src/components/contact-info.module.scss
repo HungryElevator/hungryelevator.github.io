@@ -10,11 +10,15 @@
   .Block {
     border-bottom: 1px solid $console-yellow-light;
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
     padding-bottom: 2rem;
 
     @include md {
-      flex-flow: row;
+      flex-direction: row;
+    }
+
+    &:first-of-type {
+      padding-top: 3rem;
     }
 
     section {
@@ -38,12 +42,42 @@
         }
       }
 
-      h4 {
-        letter-spacing: 4px;
-      }
+      &.Work {
+        transition: .2s linear;
 
-      ul {
-        padding-left: 1rem;
+        h4 {
+          align-items: center;
+          display: flex;
+          font-size: 1.5rem;
+          letter-spacing: 4px;
+          margin-top: 2.5rem;
+
+          svg {
+            font-size: 2rem;
+            margin-right: 10px;
+          }
+        }
+
+        ul {
+          margin-bottom: 0;
+          padding-left: 1rem;
+        }
+
+        &:hover {
+          h4 > span {
+            position: relative;
+
+            &:after {
+              bottom: -6px;
+              background: $console-yellow-light;
+              content: '';
+              height: 3px;
+              left: 0;
+              position: absolute;
+              width: 100%;
+            }
+          }
+        }
       }
 
       p {
