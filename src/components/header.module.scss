@@ -91,11 +91,16 @@
   width: 100%;
   z-index: 1;
 
+  @include md {
+    display: none;
+  }
+
   > * {
+    border-radius: 0;
     font-family: 'Roboto Mono';
     font-size: 2rem;
     letter-spacing: 10px;
-    padding: 1rem;
+    padding: 1rem 0;
     text-align: center;
     text-transform: uppercase;
     width: 50%;
