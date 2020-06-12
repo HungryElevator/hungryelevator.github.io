@@ -6,8 +6,6 @@ import styles from './header.module.scss';
 
 const Header = () => {
   const [isMenuOpen, toggleMenu] = useState(false);
-  // const html = document.getElementsByTagName('html');
-  // html[0].style.overflow = isMenuOpen ? 'hidden' : 'unset';
 
   const menuIcon = isMenuOpen ? <FaTimes /> : <FaBars />;
   const menuOptions = (
