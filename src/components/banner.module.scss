@@ -3,7 +3,7 @@
 .Banner {
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: 10% 20%;
+  // background-position: 10% 20%;
   background-size: auto;
   height: calc(100vh - #{$header-height});
   margin-top: $header-height;
