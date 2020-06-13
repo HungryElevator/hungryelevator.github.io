@@ -3,6 +3,7 @@
 .Banner {
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-position: 10% 20%;
   background-size: auto;
   height: calc(100vh - #{$header-height});
   margin-top: $header-height;
@@ -32,8 +33,8 @@
     background-color: #0c1021;
     color: white;
     display: flex;
-    float: right;
     height: 50%;
+    padding: 1rem;
     width: 100%;
 
     @include md {
@@ -48,13 +49,26 @@
       width: 100%;
 
       &--Big {
-        font-size: 6rem;
+        font-size: 4rem;
         line-height: 1;
+        margin-bottom: 1rem;
+
+        @include md {
+          font-size: 6rem;
+        }
       }
 
       &--Small {
-        font-size: 2rem;
-        line-height: 2;
+        font-size: 1.7rem;
+        line-height: 1;
+
+        @include sm {
+          font-size: 2rem;
+        }
+
+        @include md {
+          line-height: 2;
+        }
       }
     }
   }
